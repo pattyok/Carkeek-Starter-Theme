@@ -1,0 +1,121 @@
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+/* stylelint-disable */
+body {
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	color: var(--global-font-color);
+	font-family: var(--global-font-family);
+	font-size: var(--font-size-regular);
+	line-height: var(--global-font-line-height);
+}
+
+
+h1 {
+	font-stretch: condensed;
+	clear: both;
+	font-size: var(--font-size-h1);
+	font-family: var(--headings-font-family);
+	font-weight: var(--font-weight-medium);
+	margin: 0 0 1.25rem;
+	line-height: var(--headings-line-height);
+}
+
+h2,
+h3,
+h4,
+h5 {
+	line-height: var(--headings-line-height);
+	font-weight: var(--font-weight-medium);
+	margin: 0 0 1.25rem;
+	font-family: var(--headings-font-family);
+
+}
+
+h2 {
+	line-height: 1.15;
+	font-size: var(--font-size-h2);
+}
+
+h3 {
+	font-size: var(--font-size-h3);
+}
+
+h4 {
+	font-size: var(--font-size-h4);
+}
+/* stylelint-enable */
+
+.entry-header h1.entry-title,
+.page-header .page-title,
+.page-header .entry-title {
+	line-height: 1.25;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+
+
+blockquote cite {
+	color: var(--color-quote-citation);
+	font-size: 13px;
+	margin-top: 1em;
+	position: relative;
+	font-style: normal;
+}
+
+address {
+	margin: 0 0 1.5em;
+}
+
+/* stylelint-disable */
+pre {
+	background: #eee;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-size: 0.9375rem;
+	line-height: 1.6;
+	margin-bottom: 1.5em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.5em;
+}
+/* stylelint-enable */
+
+code,
+kbd,
+tt,
+var {
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	font-size: 0.8rem;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+
+mark,
+ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+
+big {
+	font-size: 125%;
+}

@@ -1,0 +1,104 @@
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+/* stylelint-disable */
+html {
+	box-sizing: border-box;
+}
+/* stylelint-enable */
+
+/**
+ * Inherit box-sizing to make it easier to change the property for
+ * components that leverage other behavior; see
+ * http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+/* stylelint-disable */
+body {
+	background: #fff;
+
+	/* Fallback for when there is no custom background color defined. */
+}
+/* stylelint-enable */
+
+/* stylelint-disable */
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+/* stylelint-enable */
+
+ul,
+ol {
+	margin: 0 0 1.5rem 1em;
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 1rem;
+}
+
+ul.no-list,
+ul.is-style-no-bullets {
+	list-style: none;
+	margin-left: 0;
+	padding-left: 0;
+}
+
+ul.list-inline {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	& li {
+		display: inline-block;
+	}
+}
+
+
+dt {
+	font-weight: 700;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}
+
+/* stylelint-disable */
+img {
+	display: block;
+	height: auto;
+	max-width: 100%;
+}
+/* stylelint-enable */
+
+/* Extra wide images within figure tags don't overflow the content area. */
+figure {
+	margin: 0.5em 0;
+}
+
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+
+p {
+	margin-bottom: 1.5rem;
+}
+

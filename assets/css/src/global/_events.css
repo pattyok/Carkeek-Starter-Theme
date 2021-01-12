@@ -1,0 +1,116 @@
+#tribe-events-bar {
+	display: none;
+}
+
+.tribe-events-list {
+	max-width: var(--content-width);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.tribe-events-page-title {
+	font-size: var(--font-size-h1);
+	font-weight: var(--font-weight-medium);
+}
+
+.archive-entry.tribe_events {
+	margin-top: var(--gutter-width-small);
+
+
+	& .archive-entry--date {
+		margin-bottom: 0.5rem;
+		font-weight: var(--font-weight-semibold);
+	}
+
+	& .event-details li {
+		padding-bottom: 0.5rem;
+		margin-left: 2rem;
+	}
+
+	& p {
+		margin: 0;
+	}
+
+	& .event-details--cats {
+		text-transform: uppercase;
+		font-weight: var(--font-weight-semibold);
+	}
+}
+
+.tribe-events-list.past-events {
+
+	& .archive-entry.tribe_events {
+
+		& .event-details li {
+			margin-left: 0;
+		}
+
+		& .event-details--time,
+		& .event-details--web {
+			display: none;
+		}
+
+		& .directions-link {
+			display: none;
+		}
+	}
+}
+
+@media (--tablet-up) {
+
+	.archive-entry.tribe_events {
+		display: flex;
+
+		& > div {
+			flex-basis: 50%;
+			margin-right: 1rem;
+			margin-left: 1rem;
+		}
+
+		& .event-details li {
+			margin-left: 0;
+		}
+
+		& .archive-entry--date {
+			white-space: nowrap;
+			text-align: right;
+		}
+	}
+
+	.tribe-events-list {
+
+		& .archive-entry.tribe_events {
+
+			& .archive-entry--date {
+
+				flex-basis: 30%;
+				margin-left: 0;
+			}
+
+			& .archive-entry--content {
+
+				flex-basis: 70%;
+				margin-right: 0;
+			}
+		}
+	}
+
+	.tribe-events-list.past-events {
+		margin-bottom: var(--block-padding-vert);
+
+		& .archive-entry.tribe_events {
+
+			flex-direction: column;
+
+			& .archive-entry--date {
+				text-align: left;
+			}
+
+			& .archive-entry--content {
+				margin-left: 0;
+			}
+		}
+	}
+
+
+}

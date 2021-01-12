@@ -1,0 +1,101 @@
+/**
+ * Custom Properties
+ * aka CSS variables.
+ *
+ * @link: https://developer.mozilla.org/en-US/docs/Web/CSS/--*
+ **/
+
+:root {
+	--global-font-color: #414141;
+	--global-font-family: "Lora", serif;
+	--global-font-size: 18;
+	--global-font-size-small: 16;
+	--global-font-line-height: 1.875;
+	--global-text-shadow: 2px 2px 6px rgba(150, 150, 150, 1);
+
+	--highlight-font-family: "Poppins", "Helvetica Neue", "Arial Narrow", sans-serif;
+	--form-field-font-family: var(--highlight-font-family);
+	--headings-font-family: "Chelsea Market", sans-serif;
+	--content-width: 720px;
+	--content-wide-width: 950px;
+	--header-width: 950px;
+	--dropdown-symbol-width: 0.7em;
+
+	--font-weight-thin: 300;
+	--font-weight-regular: 400;
+	--font-weight-medium: 500;
+	--font-weight-semibold: 600;
+	--font-weight-bold: 700;
+
+
+	--gutter-width-small: 3.7vw;
+	--gutter-width: 1.5rem;
+
+	/*block padding */
+	--block-padding-vert: 3.25rem;
+
+
+	/* Custom editor colors */
+	--color-theme-primary: #3d7cc9;
+	--color-theme-secondary: #7d9d30;
+	--color-theme-red: #f00;
+	--color-theme-red-light: #d6b5a8;
+	--color-theme-green: #7d9d30;
+	--color-theme-green-light: #94b839;
+	--color-theme-blue: #3d7cc9;
+	--color-theme-yellow: #f1c40f;
+	--color-theme-black: #414141;
+
+	--color-theme-grey-light: #f2f2f2;
+	--color-theme-grey-med-light: #eaeaea;
+	--color-theme-grey: #c3bfb7;
+	--color-theme-grey-med-dark: #6e6d6d;
+	--color-theme-grey-dark: #545454;
+	--color-theme-white: #fff;
+	--color-custom-daylight: #97c0b7;
+	--color-custom-sun: #eee9d1;
+
+	--color-body: var(--color-theme-black);
+	--color-nav-link: var(--color-theme-black);
+	--color-link: var(--color-theme-blue);
+	--color-link-visited: var(--color-theme-blue);
+	--color-link-active: var(--color-theme-green);
+
+	--color-button-bg: var(--color-theme-green);
+	--color-button-text: var(--color-theme-white);
+	--color-button-bg-hover: var(--color-theme-blue);
+	--color-button-alt-bg: var(--color-theme-blue);
+	--color-button-alt-bg: var(--color-theme-blue);
+	--color-button-alt-bg-hover: var(--color-theme-green);
+
+	--color-quote-border: #000;
+	--color-quote-citation: #6c7781;
+	--color-border: var(--color-theme-grey);
+
+	--color-footer-bg: var(--color-theme-red-light);
+	--color-footer-text: var(--color-theme-white);
+
+	/* Custom editor font sizes */
+	--font-size-small: calc(16 / var(--global-font-size) * 1rem);
+	--font-size-regular: calc(var(--global-font-size) / 16 * 1rem);
+	--font-size-large: calc(36 / var(--global-font-size) * 1rem);
+	--font-size-larger: calc(48 / var(--global-font-size) * 1rem);
+
+
+	/* Heading font sizes */
+	--headings-line-height: 1.4;
+	--font-size-h1: 3rem;
+	--font-size-h2: 2rem;
+	--font-size-h3: 1.5rem;
+	--font-size-h4: 1.25rem;
+
+
+}
+
+@media (--tablet-up) {
+
+	:root {
+		--gutter-width: 8.5vw;
+		--block-padding-vert: 7vw;
+	}
+}

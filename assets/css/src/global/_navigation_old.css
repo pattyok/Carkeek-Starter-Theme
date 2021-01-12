@@ -1,0 +1,417 @@
+/*--------------------------------------------------------------
+## Basic navigation menus - handles submenu and small screen toggle
+--------------------------------------------------------------*/
+.nav--toggle-small .menu-toggle {
+	display: block;
+	height: 100%;
+	width: 100%;
+	padding: 1rem 0;
+	font-family: var(--highlight-font-family);
+	font-stretch: condensed;
+	font-size: 80%;
+	text-transform: uppercase;
+	border: none;
+	color: var(--color-nav-link);
+	font-weight: 600;
+	border-radius: 0;
+	background: transparent;
+}
+
+.nav--toggle-small .menu-toggle .menu-toggle-label {
+	display: none;
+}
+
+.nav--toggle-small .menu {
+	display: none;
+}
+
+.nav--toggle-sub .dropdown,
+.nav--toggle-sub .dropdown-toggle {
+	display: none;
+}
+
+@media (--narrow-menu-query) {
+
+	.nav--toggle-small.nav--toggled-on .menu {
+		display: block;
+	}
+}
+
+@media (--tablet-up) {
+
+	.nav--toggle-small .menu-toggle {
+		display: none;
+	}
+
+	.nav--toggle-small .menu {
+		display: block;
+	}
+
+	.nav--toggle-sub ul ul {
+		display: none;
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		flex-direction: column;
+		background: #fff;
+		margin-left: 0;
+		padding-top: 10px;
+		z-index: 1;
+		transform: translateX(-50%);
+	}
+
+	.nav--toggle-sub ul ul::before {
+		content: "";
+		position: absolute;
+		left: 50%;
+		top: -10px;
+		width: 15px;
+		height: 15px;
+		border: solid var(--color-nav-link);
+		border-width: 0 2px 2px 0;
+		transform: translate(-50%, -50%) rotate(45deg);
+	}
+
+	.nav--toggle-sub .dropdown,
+	.nav--toggle-sub .dropdown-toggle {
+		display: block;
+		background: transparent;
+		position: absolute;
+		right: 0;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		font-size: inherit;
+		line-height: inherit;
+		margin: 0;
+		padding: 0;
+		border: none;
+		border-radius: 0;
+		overflow: visible;
+	}
+
+	.nav--toggle-sub .dropdown-symbol {
+		display: none;
+		background: transparent;
+		position: absolute;
+		right: 20%;
+		top: 35%;
+		width: 60%;
+		height: 60%;
+		border: solid #000;
+		border-width: 0 2px 2px 0;
+		transform: translateY(-50%) rotate(45deg);
+	}
+
+	.nav--toggle-sub ul ul .dropdown,
+	.nav--toggle-sub ul ul .dropdown-toggle {
+		top: 40%;
+		right: 0.2em;
+	}
+
+	.nav--toggle-sub ul ul .dropdown-symbol {
+		transform: rotate(-45deg);
+	}
+
+	.nav--toggle-sub .dropdown-toggle:hover,
+	.nav--toggle-sub .menu-item--has-toggle:hover .dropdown-toggle {
+		pointer-events: none;
+	}
+
+	/* Need menu-item-has-children for non-JS */
+	.nav--toggle-sub li.menu-item-has-children,
+	.nav--toggle-sub li.menu-item--has-toggle {
+		position: relative;
+	}
+
+	/*
+	 * If the dropdown toggle is active with JS, then
+	 * we'll take care of showing the submenu with JS.
+	 */
+	.nav--toggle-sub li:hover > ul,
+	.nav--toggle-sub li.menu-item--toggled-on > ul,
+	.nav--toggle-sub li:not(.menu-item--has-toggle):focus > ul {
+		display: block;
+	}
+
+	/*
+	 * "focus-within" is an alternative to focus class for
+	 * supporting browsers (all but IE/Edge) for no-JS context
+	 * (e.g. AMP) See https://caniuse.com/#feat=css-focus-within
+	 *
+	 * This selector needs to stay separated, otherwise submenus
+	 * will not be displayed with IE/Edge.
+	 */
+	.nav--toggle-sub li:not(.menu-item--has-toggle):focus-within > ul {
+		display: block;
+	}
+}
+
+/*--------------------------------------------------------------
+## Main navigation menu
+--------------------------------------------------------------*/
+.main-navigation {
+	clear: both;
+	display: block;
+	margin: 0 auto;
+	padding: 0;
+	max-width: var(--content-width);
+	font-family: var(--highlight-font-family);
+	font-size: 0.9375rem;
+	letter-spacing: 1.25px;
+	border-top: 2px solid var(--color-border);
+	border-bottom: 2px solid var(--color-border);
+	color: var(--color-nav-link);
+}
+
+.main-navigation a {
+	display: block;
+	width: 100%;
+	padding: 1.125rem 0;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	color: var(--color-nav-link);
+	border-top: 1px solid var(--color-border);
+	letter-spacing: 0.1em;
+	transition: text-shadow 0.3s;
+}
+
+.main-navigation li:hover > a,
+.main-navigation a:focus {
+	text-shadow: 0 0 0.65px #333, 0 0 0.65px #333;
+}
+
+.main-navigation ul {
+	display: block;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.top-navigation {
+	display: none;
+	width: 100%;
+	text-align: right;
+	margin-top: 10px;
+
+	& ul {
+		display: flex;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		justify-content: flex-end;
+
+		& li a {
+			padding: 5px;
+		}
+	}
+}
+
+.main-navigation ul ul a {
+	border: none;
+	padding: 0.5rem 0;
+}
+
+.main-navigation ul ul li:first-of-type a {
+	border-top: 1px solid var(--color-nav-link);
+}
+
+@media (--tablet-small-up) {
+
+	.main-navigation {
+		margin: 0;
+	}
+
+	.top-navigation {
+		display: block;
+	}
+
+	.main-navigation,
+	.main-navigation a {
+		border: none;
+	}
+
+	.main-navigation ul li a {
+		padding: 1rem;
+	}
+
+	.main-navigation ul li:first-child a {
+		padding-left: 0;
+	}
+
+	.main-navigation ul li:last-child a {
+		padding-right: 0;
+	}
+
+	.main-navigation ul ul {
+		border-top: none;
+	}
+
+	.main-navigation ul ul a {
+		width: 200px;
+	}
+
+	/* stylelint-disable */
+	.main-navigation ul ul li {
+		padding-left: 0;
+		margin-left: 0;
+	}
+	/* stylelint-enable */
+
+	.main-navigation ul ul li a {
+		width: 218px;
+		background: none;
+		border: 1px solid var(--color-nav-link);
+		border-top: none;
+		border-bottom: none;
+		padding: 0.5rem 0;
+	}
+
+	.main-navigation ul ul ul {
+		top: 0;
+		left: 100%;
+		min-height: 100%;
+	}
+
+	.main-navigation ul ul li:first-of-type a {
+		padding-top: 1rem;
+		border-top: 1px solid var(--color-nav-link);
+	}
+
+	.main-navigation ul ul li:last-of-type a {
+		padding-bottom: 1rem;
+		border-bottom: 1px solid var(--color-nav-link);
+	}
+
+
+}
+
+@media (--tablet-wide-up) {
+
+	.main-navigation .menu {
+		flex-basis: 70%;
+		justify-content: flex-end;
+
+		display: flex;
+		flex-wrap: nowrap;
+
+
+	}
+}
+
+/*--------------------------------------------------------------
+# Content navigation
+--------------------------------------------------------------*/
+.site-main .comment-navigation,
+.site-main .posts-navigation,
+.site-main .post-navigation,
+.site-main .pagination {
+	border-top: 1px solid var(--color-theme-grey-light);
+	margin: 0 auto 2em;
+	max-width: var(--content-wide-width);
+	overflow: hidden;
+	padding: 1.5rem 0;
+	font-family: var(--highlight-font-family);
+	font-stretch: condensed;
+
+	font-size: 15px;
+}
+
+.post-navigation-sub {
+	display: inline-block;
+	padding-right: 5px;
+	text-transform: uppercase;
+}
+
+@media (--content-query) {
+
+	.site-main .comment-navigation,
+	.site-main .posts-navigation,
+	.site-main .post-navigation,
+	.site-main .pagination {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.nav-links {
+	display: flex;
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+	width: 50%;
+	flex: 1 0 50%;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+	text-align: end;
+	flex: 1 0 50%;
+}
+
+.post-navigation-sub span {
+	color: var(--global-font-color);
+	text-decoration: none;
+	display: inline-block;
+}
+
+.site-main .pagination {
+	margin-bottom: 1.5em;
+}
+
+.pagination .nav-links {
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.pagination .page-numbers {
+	display: inline-block;
+	margin-bottom: 0.5em;
+	margin-right: 1em;
+	border: 1px solid var(--color-link);
+	min-width: 1.75em;
+	line-height: 1.75;
+	text-align: center;
+	text-decoration: none;
+}
+
+.pagination a:visited {
+	color: var(--color-link);
+}
+
+.pagination a:hover,
+.pagination a:focus,
+.pagination a:active {
+	border-color: #00a0d2;
+}
+
+.pagination .prev,
+.pagination .next {
+	min-width: auto;
+	border-color: transparent;
+	text-decoration: underline;
+}
+
+.pagination .prev:hover,
+.pagination .prev:focus,
+.pagination .prev:active,
+.pagination .next:hover,
+.pagination .next:focus,
+.pagination .next:active {
+	border-color: transparent;
+}
+
+.pagination .dots {
+	min-width: auto;
+	border: none;
+}
+
+.pagination .current {
+	border-color: var(--global-font-color);
+}

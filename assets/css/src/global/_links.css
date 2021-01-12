@@ -1,0 +1,92 @@
+/*--------------------------------------------------------------
+# Links
+--------------------------------------------------------------*/
+/* stylelint-disable */
+a {
+	color: var(--color-link);
+	text-decoration: none;
+	transition: all 0.2s ease-in;
+	font-weight: var(--font-weight-semibold);
+}
+/* stylelint-enable */
+
+a:visited {
+	color: var(--color-link-visited);
+}
+
+a:hover,
+a:focus,
+a:active {
+	color: var(--color-link-active);
+}
+
+a:focus {
+	outline: thin dotted;
+}
+
+a:hover,
+a:active {
+	outline: 0;
+}
+
+.arrow-link > a {
+	font-weight: 600;
+	text-decoration: none;
+	color: var(--global-font-color);
+}
+
+.arrow-link > a:hover,
+.arrow-link > a:active {
+	color: var(--color-link-active);
+}
+
+.arrow-link > a::after {
+	content: " \203A";
+}
+
+
+.gpopover {
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-color: rgba(0, 0, 0, 0.2);
+	border-radius: 2px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	display: none;
+	padding: 12px;
+	position: absolute;
+	z-index: 998;
+}
+
+.gpopover .gpopover-arrow {
+	border: 8px solid transparent;
+	border-top-color: #fff;
+	border-bottom-width: 0;
+	height: 0;
+	position: absolute;
+	width: 0;
+	z-index: 999;
+}
+
+.gpopover .gpopover-arrow-shadow {
+	border: 8px solid transparent;
+	border-top-color: #c0c0c0;
+	border-top-color: rgba(0, 0, 0, 0.275);
+	border-bottom-width: 0;
+	height: 0;
+	position: absolute;
+	width: 0;
+	z-index: 997;
+}
+
+ul.social-links {
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+	& a {
+		font-size: 24px;
+	}
+
+	& li:first-of-type i::before {
+		margin-left: 0;
+	}
+}

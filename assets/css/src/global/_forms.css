@@ -1,0 +1,115 @@
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+/* stylelint-disable */
+textarea {
+	width: 100%;
+}
+/* stylelint-enable */
+
+/* stylelint-disable */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 1px solid;
+	border-color: transparent;
+	border-radius: 0;
+	background: var(--color-button-bg);
+	color: var(--color-button-text);
+	font-size: var(--font-size-regular);
+	font-family: var(--form-field-font-family);
+	font-weight: 600;
+	line-height: 1;
+	padding: 1.25rem 2rem;
+	cursor: pointer;
+	transition: background 0.5s ease;
+}
+/* stylelint-enable */
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+	background: var(--color-button-bg-hover);
+}
+
+button:active,
+button:focus,
+input[type="button"]:active,
+input[type="button"]:focus,
+input[type="reset"]:active,
+input[type="reset"]:focus,
+input[type="submit"]:active,
+input[type="submit"]:focus {
+	border-color: #aaa #bbb #bbb;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+	color: var(--color-theme-grey-med-dark);
+	border: 1px solid var(--color-border);
+	border-radius: 0;
+	padding: 1rem;
+	font-size: var(--font-size-regular);
+	font-family: var(--form-field-font-family);
+	width: 100%;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+	color: #111;
+}
+
+/** background image is fa-chevron-down svg
+    more info here: https://css-tricks.com/probably-dont-base64-svg/ && here https://codepen.io/geoffyuen/pen/zGKQQW
+**/
+select:not([multiple]) {
+
+	display: block;
+	padding: 1rem;
+	width: 100%;
+	max-width: 100%;
+	box-sizing: border-box;
+	font-size: var(--font-size-regular);
+	font-family: var(--form-field-font-family);
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	border: 1px solid var(--color-border);
+	border-radius: 0;
+	background-color: #fff;
+	background-image: url(data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M207 381.5L12.7 187.1c-9.4-9.4-9.4-24.6 0-33.9l22.7-22.7c9.4-9.4 24.5-9.4 33.9 0l154.7 154 154.7-154c9.4-9.3 24.5-9.3 33.9 0l22.7 22.7c9.4 9.4 9.4 24.6 0 33.9L241 381.5c-9.4 9.3-24.6 9.3-34 0z" fill="%238f9093"/></svg>);
+	background-repeat: no-repeat, repeat;
+	background-position: right 0.7em top 50%, 0 0;
+	background-size: 0.65em auto, 100%;
+}
+

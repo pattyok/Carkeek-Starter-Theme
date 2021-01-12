@@ -1,0 +1,123 @@
+.post-type-archive-books {
+
+	& .site-main {
+		padding-right: var(--gutter-width);
+		padding-left: var(--gutter-width);
+	}
+
+	& .archive-wrapper {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	& .archive-entry {
+		flex-direction: column;
+		margin-top: 0;
+		padding-right: var(--gutter-width);
+		padding-left: var(--gutter-width);
+		margin-bottom: var(--gutter-width);
+	}
+
+	.post-thumbnail {
+		border-bottom: none;
+	}
+
+	& .archive-entry--content {
+		padding-top: 1.5rem;
+		padding-bottom: 1.5rem;
+		border-bottom: none;
+
+		& .entry-header {
+			padding: 0;
+		}
+
+		& h2.entry-title {
+			font-size: 1.25rem;
+			text-align: center;
+
+			& a {
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+.wp-block-ck-custom_posttype__image-link {
+
+	& > img {
+		height: 245px;
+		object-fit: cover;
+	}
+}
+
+.wp-block-ck-custom_posttype__list.is-grid {
+
+	& > ul > li {
+		position: relative;
+		padding: 0 15px;
+		margin-bottom: 1.5rem;
+		overflow: hidden;
+	}
+
+	& .wp-block-ck-custom_posttype__content-wrap {
+		display: none;
+		position: absolute;
+		padding: 0.5rem;
+		bottom: 0;
+		width: calc(100% - 30px);
+		background: rgba(0, 0, 0, 0.2);
+		color: #fff;
+		font-family: var(--highlight-font-family);
+		transition: all 0.2s ease;
+
+		& a {
+			color: #fff;
+		}
+	}
+}
+
+@media (--tablet-up) {
+
+	.post-type-archive-books {
+
+		& .site-main {
+			padding-right: var(--gutter-width-small);
+			padding-left: var(--gutter-width-small);
+			max-width: calc(var(--content-wide-width) + (2 * var(--gutter-width-small) ));
+			margin: 0 auto;
+		}
+
+
+		& .page-header {
+			padding-left: 0;
+			padding-right: 0;
+			width: 100%;
+		}
+
+
+		& .archive-entry {
+			flex-direction: column;
+			margin-top: 0;
+			flex-basis: 50%;
+			padding-right: var(--gutter-width-small);
+			padding-left: var(--gutter-width-small);
+			margin-bottom: var(--gutter-width-small);
+		}
+
+
+		& .archive-entry--content {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+	}
+}
+
+.single-books {
+
+	& .entry-footer,
+	& .post-navigation {
+		display: none;
+	}
+}
+

@@ -1,0 +1,58 @@
+/*--------------------------------------------------------------
+# Fonts
+--------------------------------------------------------------*/
+@font-face {
+	font-family: truenobold;
+	src:
+		url(../fonts/truenobd-webfont.woff2) format("woff2"),
+		url(../fonts/truenobd-webfont.woff) format("woff"),
+		url(../fonts/truenobd-webfont.ttf) format("truetype");
+	font-style: normal;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: "truenobold_italic";
+	src: url(../fonts/truenobdit-webfont.woff2) format("woff2"), url(../fonts/truenobdit-webfont.woff) format("woff");
+	font-style: normal;
+}
+
+@font-face {
+	font-family: truenolight;
+	src: url(../fonts/truenolt-webfont.woff2) format("woff2"), url(../fonts/truenolt-webfont.woff) format("woff");
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "truenolight_italic";
+	src: url(../fonts/truenoltit-webfont.woff2) format("woff2"), url(../fonts/truenoltit-webfont.woff) format("woff");
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "truenoregular_italic";
+	src:
+		url(../fonts/truenorgit-webfont.woff2) format("woff2"),
+		url(../fonts/truenorgit-webfont.woff) format("woff");
+	font-style: normal;
+}
+
+@font-face {
+	font-family: truenoregular;
+	src:
+		url(../fonts/truenorg-webfont.woff2) format("woff2"),
+		url(../fonts/truenorg-webfont.woff) format("woff");
+	font-style: normal;
+}
+
+@font-face {
+	font-family: truenoultralight;
+	src: url(../fonts/truenoultlt-webfont.woff2) format("woff2"), url(../fonts/truenoultlt-webfont.woff) format("woff");
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "truenoultralight_italic";
+	src: url(../fonts/truenoultltit-webfont.woff2) format("woff2"), url(../fonts/truenoultltit-webfont.woff) format("woff");
+	font-style: normal;
+}

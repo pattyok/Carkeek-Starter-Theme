@@ -1,0 +1,149 @@
+@font-face {
+	font-family: carkeek-blocks;
+	src: url(../fonts/carkeek-blocks.eot?50345014);
+	src:
+		url(../fonts/carkeek-blocks.eot?50345014#iefix) format("embedded-opentype"),
+		url(../fonts/carkeek-blocks.woff2?50345014) format("woff2"),
+		url(../fonts/carkeek-blocks.woff?50345014) format("woff"),
+		url(../fonts/carkeek-blocks.ttf?50345014) format("truetype"),
+		url(../fonts/carkeek-blocks.svg?50345014#carkeek-blocks) format("svg");
+	font-weight: 400;
+	font-style: normal;
+}
+
+/* Chrome hack: SVG is rendered more smooth in Windozze.
+100% magic, uncomment if you need it. */
+
+/* Note, that will break hinting!
+In other OS-es font will be not as sharp as it could be */
+
+/*
+  @media screen and (-webkit-min-device-pixel-ratio:0) {
+	@font-face {
+	  font-family: 'carkeek-blocks';
+	  src: url('../fonts/carkeek-blocks.svg?50345014#carkeek-blocks') format('svg');
+	}
+  }
+  */
+
+[class^="icon-"]::before,
+[class*=" icon-"]::before {
+	font-family: carkeek-blocks, sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	speak: never;
+
+	display: inline-block;
+	text-decoration: inherit;
+	width: 1em;
+	margin-right: 0.2em;
+	text-align: center;
+
+	/* opacity: .8; */
+
+	/* For safety - reset parent styles, that can break glyph codes*/
+	font-variant: normal;
+	text-transform: none;
+
+	/* fix buttons height, for twitter bootstrap */
+	line-height: 1;
+
+	/* Animation center compensation - margins should be symmetric */
+
+	/* remove if not needed */
+	margin-left: 0.2em;
+
+	/* you can be more comfortable with increased icons size */
+
+	/* font-size: 120%; */
+
+	/* Font smoothing. That was taken from TWBS */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	/* Uncomment for 3D effect */
+
+	/* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-mail::before {
+	content: "\e800";
+} /* '' */
+.icon-calendar::before {
+	content: "\e801";
+} /* '' */
+.icon-left-open::before {
+	content: "\e802";
+} /* '' */
+.icon-right-open::before {
+	content: "\e803";
+} /* '' */
+.icon-up-open::before {
+	content: "\e804";
+} /* '' */
+.icon-down-open::before {
+	content: "\e805";
+} /* '' */
+.icon-plus::before {
+	content: "\e806";
+} /* '' */
+.icon-minus::before {
+	content: "\e807";
+} /* '' */
+.icon-plus-light::before {
+	content: "\e808";
+} /* '' */
+.icon-minus-light::before {
+	content: "\e809";
+} /* '' */
+.icon-ok::before {
+	content: "\e80a";
+} /* '' */
+.icon-lock::before {
+	content: "\e80b";
+} /* '' */
+.icon-twitter::before {
+	content: "\f099";
+} /* '' */
+.icon-facebook::before {
+	content: "\f09a";
+} /* '' */
+.icon-linkedin::before {
+	content: "\f0e1";
+} /* '' */
+.icon-angle-left::before {
+	content: "\f104";
+} /* '' */
+.icon-angle-right::before {
+	content: "\f105";
+} /* '' */
+.icon-angle-up::before {
+	content: "\f106";
+} /* '' */
+.icon-angle-down::before {
+	content: "\f107";
+} /* '' */
+.icon-circle-empty::before {
+	content: "\f10c";
+} /* '' */
+.icon-circle::before {
+	content: "\f111";
+} /* '' */
+.icon-angle-circled-left::before {
+	content: "\f137";
+} /* '' */
+.icon-angle-circled-right::before {
+	content: "\f138";
+} /* '' */
+.icon-lock-open-alt::before {
+	content: "\f13e";
+} /* '' */
+.icon-instagram::before {
+	content: "\f16d";
+} /* '' */
+.icon-dot-circled::before {
+	content: "\f192";
+} /* '' */
+.icon-pinterest::before {
+	content: "\f231";
+} /* '' */

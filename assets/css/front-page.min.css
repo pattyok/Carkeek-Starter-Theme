@@ -1,0 +1,30 @@
+/**
+ * Custom styles for the front-page.php template.
+ */
+
+
+.wp-block-image.alignleft,
+.wp-caption.alignleft {
+	margin-left: 0;
+}
+
+
+.wp-block-image.alignright,
+.wp-caption.alignright {
+	margin-right: 0;
+}
+
+
+.entry-footer {
+	border-bottom: none;
+}
+
+
+.site-main .posts-navigation {
+	width: 100%;
+	margin-bottom: 0;
+	padding: 2rem 0 0;
+	border-top: 1px solid #111;
+	border-bottom: none;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImZyb250LXBhZ2UuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOztFQUVFOzs7QUFHRjs7Q0FFQyxjQUFjO0FBQ2Y7OztBQUVBOztDQUVDLGVBQWU7QUFDaEI7OztBQUVBO0NBQ0MsbUJBQW1CO0FBQ3BCOzs7QUFFQTtDQUNDLFdBQVc7Q0FDWCxnQkFBZ0I7Q0FDaEIsaUJBQWlCO0NBQ2pCLDBCQUEwQjtDQUMxQixtQkFBbUI7QUFDcEIiLCJmaWxlIjoiZnJvbnQtcGFnZS5taW4uY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLyoqXG4gKiBDdXN0b20gc3R5bGVzIGZvciB0aGUgZnJvbnQtcGFnZS5waHAgdGVtcGxhdGUuXG4gKi9cblxuXG4ud3AtYmxvY2staW1hZ2UuYWxpZ25sZWZ0LFxuLndwLWNhcHRpb24uYWxpZ25sZWZ0IHtcblx0bWFyZ2luLWxlZnQ6IDA7XG59XG5cbi53cC1ibG9jay1pbWFnZS5hbGlnbnJpZ2h0LFxuLndwLWNhcHRpb24uYWxpZ25yaWdodCB7XG5cdG1hcmdpbi1yaWdodDogMDtcbn1cblxuLmVudHJ5LWZvb3RlciB7XG5cdGJvcmRlci1ib3R0b206IG5vbmU7XG59XG5cbi5zaXRlLW1haW4gLnBvc3RzLW5hdmlnYXRpb24ge1xuXHR3aWR0aDogMTAwJTtcblx0bWFyZ2luLWJvdHRvbTogMDtcblx0cGFkZGluZzogMnJlbSAwIDA7XG5cdGJvcmRlci10b3A6IDFweCBzb2xpZCAjMTExO1xuXHRib3JkZXItYm90dG9tOiBub25lO1xufVxuIl19 */
