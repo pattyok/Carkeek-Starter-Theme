@@ -55,7 +55,10 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		);
 	}
 
-	function get_social_links() {
+	/**
+	 * Set social links in options (ACF)
+	 */
+	public function get_social_links() {
 		$links = '';
 		if ( function_exists( 'get_field' ) ) {
 			// Check rows exists.
@@ -75,7 +78,10 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		return $links;
 	}
 
-	function get_contactinfo() {
+	/**
+	 * Get Contact Info from Options (ACF)
+	 */
+	public function get_contactinfo() {
 		if ( function_exists( 'get_field' ) ) {
 			$contact = get_field( 'contact_email', 'option' );
 			if ( ! empty( $contact ) ) {
@@ -87,7 +93,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	/**
 	 * Quick and dirty way to get an item resembling the link tiles block
 	 */
-	function get_category_listing() {
+	public function get_category_listing() {
 		$cats = get_categories();
 
 		ob_start();
@@ -96,7 +102,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		$count = 0;
 		$total = count( $cats );
 		foreach ( $cats as $cat ) {
-			if ( $count === 0 || $count % 3 === 0 ) {
+			if ( 0 === $count || 0 === $count % 3 ) {
 				?>
 				<div class="wp-block-carkeek-blocks-link-tiles alignwide wp-block-columns link-tiles-shortcode">
 				<?php
@@ -114,7 +120,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 				</a>
 			</div>
 			<?php
-			if ( $count % 3 === 0 || $count === $total ) {
+			if ( 0 === $count % 3 || $count === $total ) {
 				?>
 		</div>
 				<?php
@@ -127,7 +133,11 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		ob_end_clean();
 		return $output_string;
 	}
-	function add_custom_shortcodes() {
+
+	/** Add Shortcodes to Theme.
+	 * Mostly these are for use in widget areas.
+	 */
+	public function add_custom_shortcodes() {
 		add_shortcode(
 			'contact',
 			function() {

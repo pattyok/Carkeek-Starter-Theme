@@ -49,8 +49,8 @@ if ( is_404() ) {
 	$image        = '';
 	$header_class = '';
 	if ( is_category() ) {
-		$term = get_queried_object();
-		$image  = get_field( 'category_image', $term );
+		$catid = get_queried_object();
+		$image  = get_field( 'category_image', $catid );
 	}
 	if ( ! empty( $image ) ) {
 		$header_class .= 'has-post-thumbnail';
@@ -74,13 +74,17 @@ if ( is_404() ) {
 		</div>
 	</header><!-- .page-header -->
 	<?php
-} elseif ( ! is_front_page() ) {
+} elseif ( ! is_front_page() || (is_front_page() && has_post_thumbnail() ) ) {
 	$hide_title     = filter_var( get_post_meta( $post->ID, '_carkeekblocks_title_hidden', true ), FILTER_VALIDATE_BOOLEAN );
 	$hide_image     = filter_var( get_post_meta( $post->ID, '_carkeekblocks_featuredimage_hidden', true ), FILTER_VALIDATE_BOOLEAN );
 	$header_class   = '';
 	$header_content = '';
 	if ( true !== $hide_image && has_post_thumbnail() ) {
 		$header_class .= 'has-post-thumbnail';
+	}
+
+	if (is_front_page()) {
+		$hide_title =true;
 	}
 
 	?>

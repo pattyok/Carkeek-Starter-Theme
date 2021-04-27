@@ -7,7 +7,7 @@
   "dev": {
     "browserSync": {
       "live": true,
-      "proxyURL": "egg-carton-store-blog.local",
+      "proxyURL": "carkeek-theme-for-reuse.local",
       "bypassPort": "3000",
       "https": true,
       "certPath": "/Users/pattyohara/Sites/BrowserSync/wp-rig-browser-sync-cert.crt",

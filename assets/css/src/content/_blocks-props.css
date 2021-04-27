@@ -23,11 +23,11 @@
 }
 
 .add-top-margin {
-	margin-top: var(--block-padding-vert);
+	margin-top: var(--block-spacing-vert);
 }
 
 .add-top-margin-small {
-	margin-top: var(--gutter-width);
+	margin-top: var(--block-spacing-vert-small);
 }
 
 .no-bottom-margin {
@@ -35,11 +35,11 @@
 }
 
 .add-bottom-margin {
-	margin-bottom: var(--block-padding-vert);
+	margin-bottom: var(--block-spacing-vert);
 }
 
 .add-bottom-margin-small {
-	margin-bottom: var(--gutter-width);
+	margin-bottom: var(--block-spacing-vert-small);
 }
 
 [class^="wp-block-"] {
@@ -49,11 +49,11 @@
 	}
 
 	&.add-top-margin {
-		margin-top: var(--block-padding-vert);
+		margin-top: var(--block-spacing-vert);
 	}
 
 	&.add-top-margin-small {
-		margin-top: var(--gutter-width);
+		margin-top: var(--block-spacing-vert-small);
 	}
 
 	&.no-bottom-margin {
@@ -61,11 +61,11 @@
 	}
 
 	&.add-bottom-margin {
-		margin-bottom: var(--block-padding-vert);
+		margin-bottom: var(--block-spacing-vert);
 	}
 
 	&.add-bottom-margin-small {
-		margin-bottom: var(--gutter-width);
+		margin-bottom: var(--block-spacing-vert-small);
 	}
 
 	&.no-padding {
@@ -86,31 +86,6 @@
 
 	&.no-padding-top {
 		padding-top: 0;
-	}
-
-}
-
-@media (--tablet-small-up) {
-
-
-	.add-top-margin-small {
-		margin-top: var(--gutter-width-small);
-	}
-
-	.add-bottom-margin-small {
-		margin-bottom: var(--gutter-width-small);
-	}
-
-	[class^="wp-block-"] {
-
-		&.add-top-margin-small {
-			margin-top: var(--gutter-width-small);
-		}
-
-		&.add-bottom-margin-small {
-			margin-bottom: var(--gutter-width-small);
-		}
-
 	}
 }
 
@@ -199,6 +174,15 @@ ul.is-style-circle-checked {
 	background-color: var(--color-theme-green);
 }
 
+.has-theme-green-dark-color,
+.has-theme-green-dark-color a {
+	color: var(--color-theme-green-dark);
+}
+
+.has-theme-green-dark-background-color {
+	background-color: var(--color-theme-green-dark);
+}
+
 .has-theme-blue-color,
 .has-theme-blue-color a {
 	color: var(--color-theme-blue);
@@ -206,6 +190,15 @@ ul.is-style-circle-checked {
 
 .has-theme-blue-background-color {
 	background-color: var(--color-theme-blue);
+}
+
+.has-theme-blue-dark-color,
+.has-theme-blue-dark-color a {
+	color: var(--color-theme-blue-dark);
+}
+
+.has-theme-blue-dark-background-color {
+	background-color: var(--color-theme-blue-dark);
 }
 
 
@@ -268,6 +261,9 @@ ul.is-style-circle-checked {
 
 
 .has-theme-black-background-color,
+.has-theme-green-dark-background-color,
+.has-theme-blue-dark-background-color,
+.has-theme-blue-background-color,
 .has-theme-teal-background-color {
 	color: var(--color-theme-white);
 
@@ -285,6 +281,7 @@ ul.is-style-circle-checked {
 }
 
 .has-theme-white-background-color,
+.has-theme-green-background-color,
 .has-theme-grey-light-background-color {
 	color: var(--color-theme-black);
 
@@ -349,5 +346,4 @@ ul.is-style-circle-checked {
 .innerblock-headline-style-h6 .inner-block-headline {
 	font-size: var(--font-size-h6);
 }
-
 

@@ -232,7 +232,7 @@ class Component implements Component_Interface {
 				$wp_customize,
 				'wprig_footerlower_bg_color',
 				array(
-					'label'    => 'Footer Top BG Color',
+					'label'    => 'Footer Lower BG Color',
 					'section'  => 'wprig_footer_section',
 					'settings' => 'wprig_footerlower_bg_color',
 
@@ -245,13 +245,14 @@ class Component implements Component_Interface {
 				$wp_customize,
 				'wprig_footerlower_text_color',
 				array(
-					'label'    => 'Footer Top Text Color',
+					'label'    => 'Footer Lower Text Color',
 					'section'  => 'wprig_footer_section',
 					'settings' => 'wprig_footerlower_text_color',
 				)
 			)
 		);
 	}
+
 
 	/**
 	 * Adds inline css to style the footer.

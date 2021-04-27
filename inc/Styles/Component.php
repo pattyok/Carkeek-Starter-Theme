@@ -370,8 +370,8 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		}
 
 		$google_fonts = array(
-			'Chelsea Market' => array( '400' ),
-			'Poppins'        => array( '300', '400' ),
+			'Arvo' => array( '400', '400i', '700', '700i' ),
+			'Lato' => array( '400', '400i', '700', '700i', '900', '900i' ),
 		);
 
 		/**

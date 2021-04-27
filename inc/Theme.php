@@ -162,6 +162,11 @@ class Theme {
 			$components[] = new Jetpack\Component();
 		}
 
+		// check for plugin using plugin name
+		if ( in_array( 'the-events-calendar/the-events-calendar.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
+			$components[] = new Events_Calendar\Component();
+		}
+
 		return $components;
 	}
 }

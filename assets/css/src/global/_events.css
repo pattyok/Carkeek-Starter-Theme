@@ -10,7 +10,7 @@
 
 .tribe-events-page-title {
 	font-size: var(--font-size-h1);
-	font-weight: var(--font-weight-medium);
+	font-weight: var(--font-weight-semibold);
 }
 
 .archive-entry.tribe_events {
@@ -56,6 +56,18 @@
 	}
 }
 
+.ck-events-intro {
+	padding: 0 var(--gutter-width-page);
+	text-align: center;
+	max-width: var(--content-width);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.tribe-events .tribe-events-c-ical__link {
+	display: none;
+}
+
 @media (--tablet-up) {
 
 	.archive-entry.tribe_events {
@@ -96,7 +108,7 @@
 	}
 
 	.tribe-events-list.past-events {
-		margin-bottom: var(--block-padding-vert);
+		margin-bottom: var(--block-spacing-vert);
 
 		& .archive-entry.tribe_events {
 

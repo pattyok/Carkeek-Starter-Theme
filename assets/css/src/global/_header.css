@@ -22,7 +22,7 @@
 
 
 	& img {
-		max-width: 100px;
+		max-width: var(--header-logo-max-width);
 		margin: 0 auto;
 	}
 }
@@ -51,22 +51,27 @@
 	color: #757575;
 }
 
+.site-header--inner {
+	position: relative;
+	z-index: 1000;
+}
+
 @media (--tablet-up) {
+
+	.site-header {
+		border-bottom: var(--borders-standard);
+	}
 
 	.site-branding {
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-start;
-		padding: 0 0 1rem 0;
+		padding: 1rem 0 1rem 0;
 		margin: 0;
 
 		& img {
 			margin-left: 0;
 		}
-	}
-
-	.custom-logo-link {
-		margin: -1.5rem 0 0 0;
 	}
 
 	.site-title {
@@ -79,11 +84,12 @@
 		display: flex;
 		align-items: flex-end;
 		justify-content: space-between;
-		flex-wrap: wrap;
+		flex-wrap: nowrap;
 		max-width: var(--header-width);
 		margin: 0 auto;
 		padding-left: 2rem;
 		padding-right: 2rem;
+		position: relative;
 	}
 
 }

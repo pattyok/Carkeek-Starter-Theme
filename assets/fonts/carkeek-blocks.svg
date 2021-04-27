@@ -1,7 +1,7 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg xmlns="http://www.w3.org/2000/svg">
-<metadata>Copyright (C) 2020 by original authors @ fontello.com</metadata>
+<metadata>Copyright (C) 2021 by original authors @ fontello.com</metadata>
 <defs>
 <font id="carkeek-blocks" horiz-adv-x="1000" >
 <font-face font-family="carkeek-blocks" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
@@ -29,6 +29,10 @@
 <glyph glyph-name="ok" unicode="&#xe80a;" d="M933 534q0-22-16-38l-404-404-76-76q-16-15-38-15t-38 15l-76 76-202 202q-15 16-15 38t15 38l76 76q16 16 38 16t38-16l164-165 366 367q16 16 38 16t38-16l76-76q16-15 16-38z" horiz-adv-x="1000" />
 
 <glyph glyph-name="lock" unicode="&#xe80b;" d="M179 421h285v108q0 59-42 101t-101 41-101-41-41-101v-108z m464-53v-322q0-22-16-37t-38-16h-535q-23 0-38 16t-16 37v322q0 22 16 38t38 15h17v108q0 102 74 176t176 74 177-74 73-176v-108h18q23 0 38-15t16-38z" horiz-adv-x="642.9" />
+
+<glyph glyph-name="basket" unicode="&#xe80c;" d="M357-7q0-29-21-50t-50-22-50 22-22 50 22 50 50 21 50-21 21-50z m500 0q0-29-21-50t-50-22-50 22-22 50 22 50 50 21 50-21 21-50z m72 607v-286q0-13-10-23t-22-12l-583-68q7-34 7-40 0-8-13-35h513q15 0 26-11t10-25-10-25-26-11h-571q-14 0-25 11t-11 25q0 6 5 18t9 20 12 22 8 17l-98 459h-114q-15 0-25 10t-11 25 11 26 25 10h143q9 0 16-3t10-9 8-14 4-14 3-17 3-14h670q14 0 25-11t11-25z" horiz-adv-x="928.6" />
+
+<glyph glyph-name="arrow" unicode="&#xe80d;" d="M2028 821l40-22 727-409 70-40-70-40-727-409-40-22-44 79 39 22 576 325-2553 0 0 91 2553 0-576 324-39 22 44 79z" horiz-adv-x="2909" />
 
 <glyph glyph-name="twitter" unicode="&#xf099;" d="M904 622q-37-54-90-93 0-8 0-23 0-73-21-145t-64-139-103-117-144-82-181-30q-151 0-276 81 19-2 43-2 126 0 224 77-59 1-105 36t-64 89q19-3 34-3 24 0 48 6-63 13-104 62t-41 115v2q38-21 82-23-37 25-59 64t-22 86q0 49 25 91 68-83 164-133t208-55q-5 21-5 41 0 75 53 127t127 53q79 0 132-57 61 12 115 44-21-64-80-100 52 6 104 28z" horiz-adv-x="928.6" />
 

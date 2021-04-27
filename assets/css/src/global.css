@@ -22,6 +22,7 @@
 --------------------------------------------------------------*/
 
 @import "global/_fonts.css";
+@import "global/_fontello.css";
 @import "global/_custom-properties.css";
 @import "global/_reset.css";
 @import "global/_typography.css";

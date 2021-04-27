@@ -7,50 +7,60 @@
 
 :root {
 	--global-font-color: #414141;
-	--global-font-family: "Lora", serif;
+	--global-font-family: "Lato", "Helvetica Neue", "Arial Narrow", sans-serif;
 	--global-font-size: 18;
 	--global-font-size-small: 16;
 	--global-font-line-height: 1.875;
 	--global-text-shadow: 2px 2px 6px rgba(150, 150, 150, 1);
 
-	--highlight-font-family: "Poppins", "Helvetica Neue", "Arial Narrow", sans-serif;
-	--form-field-font-family: var(--highlight-font-family);
-	--headings-font-family: "Chelsea Market", sans-serif;
+	--highlight-font-family: var(--global-font-family);
+	--form-field-font-family: var(--global-font-family);
+	--font-family-headings: "Arvo", serif;
+	--font-family-icons: carkeek-blocks, sans-serif;
+	--font-family-navigation: var(--global-font-family);
 	--content-width: 720px;
-	--content-wide-width: 950px;
+	--content-width-wide: 1150px;
 	--header-width: 950px;
 	--dropdown-symbol-width: 0.7em;
 
-	--font-weight-thin: 300;
 	--font-weight-regular: 400;
-	--font-weight-medium: 500;
-	--font-weight-semibold: 600;
-	--font-weight-bold: 700;
+	--font-weight-semibold: 700;
+	--font-weight-bold: 900;
+	--font-weight-button: var(--font-weight-semibold);
 
+	--header-logo-max-width: 80vw;
+	--page-header-max-height: 250px;
 
+	/** deprecate these **/
 	--gutter-width-small: 3.7vw;
 	--gutter-width: 1.5rem;
 
+	/** Use these instead **/
+	--gutter-width-columns: 1.5rem;
+	--gutter-width-page: 1rem;
+
 	/*block padding */
-	--block-padding-vert: 3.25rem;
+	--block-spacing-vert: 3.25rem;
+	--block-spacing-vert-small: 1.5rem;
+	--block-spacing-vert-inner: 1.5rem;
 
 
 	/* Custom editor colors */
-	--color-theme-primary: #3d7cc9;
-	--color-theme-secondary: #7d9d30;
+	--color-theme-primary: var(--color-theme-blue);
+	--color-theme-secondary: var(--color-theme-green);
 	--color-theme-red: #f00;
-	--color-theme-red-light: #d6b5a8;
-	--color-theme-green: #7d9d30;
-	--color-theme-green-light: #94b839;
-	--color-theme-blue: #3d7cc9;
+	--color-theme-green: #3faf49;
+	--color-theme-green-dark: #007a4b;
+	--color-theme-blue: #037bc1;
+	--color-theme-blue-dark: #252d65;
 	--color-theme-yellow: #f1c40f;
 	--color-theme-black: #414141;
 
 	--color-theme-grey-light: #f2f2f2;
-	--color-theme-grey-med-light: #eaeaea;
-	--color-theme-grey: #c3bfb7;
-	--color-theme-grey-med-dark: #6e6d6d;
-	--color-theme-grey-dark: #545454;
+	--color-theme-grey-med-light: #d9d9d9;
+	--color-theme-grey: #c0c0c0;
+	--color-theme-grey-med-dark: #a6a6a6;
+	--color-theme-grey-dark: #808080;
 	--color-theme-white: #fff;
 	--color-custom-daylight: #97c0b7;
 	--color-custom-sun: #eee9d1;
@@ -61,10 +71,9 @@
 	--color-link-visited: var(--color-theme-blue);
 	--color-link-active: var(--color-theme-green);
 
-	--color-button-bg: var(--color-theme-green);
+	--color-button-background: var(--color-theme-primary);
 	--color-button-text: var(--color-theme-white);
-	--color-button-bg-hover: var(--color-theme-blue);
-	--color-button-alt-bg: var(--color-theme-blue);
+	--color-button-background-hover: color-mod(var(--color-button-background) shade(15%));
 	--color-button-alt-bg: var(--color-theme-blue);
 	--color-button-alt-bg-hover: var(--color-theme-green);
 
@@ -72,13 +81,15 @@
 	--color-quote-citation: #6c7781;
 	--color-border: var(--color-theme-grey);
 
-	--color-footer-bg: var(--color-theme-red-light);
-	--color-footer-text: var(--color-theme-white);
+	--color-footer-bg: var(--color-theme-grey-light);
+	--color-footer-text: var(--color-theme-black);
+
+	--borders-standard: 1px solid var(--color-border);
 
 	/* Custom editor font sizes */
 	--font-size-small: calc(16 / var(--global-font-size) * 1rem);
 	--font-size-regular: calc(var(--global-font-size) / 16 * 1rem);
-	--font-size-large: calc(36 / var(--global-font-size) * 1rem);
+	--font-size-large: calc(24 / var(--global-font-size) * 1rem);
 	--font-size-larger: calc(48 / var(--global-font-size) * 1rem);
 
 
@@ -95,7 +106,12 @@
 @media (--tablet-up) {
 
 	:root {
+		--header-logo-max-width: 25vw;
 		--gutter-width: 8.5vw;
-		--block-padding-vert: 7vw;
+		--block-spacing-vert: 5rem;
+		--block-spacing-vert-inner: 2.5rem;
+		--font-size-large: calc(36 / var(--global-font-size) * 1rem);
+
+		--page-header-max-height: 400px;
 	}
 }

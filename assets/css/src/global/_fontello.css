@@ -1,36 +1,39 @@
+/* stylelint-disable */
 @font-face {
 	font-family: carkeek-blocks;
-	src: url(../fonts/carkeek-blocks.eot?50345014);
+	src: url("../fonts/carkeek-blocks.eot?74982249");
 	src:
-		url(../fonts/carkeek-blocks.eot?50345014#iefix) format("embedded-opentype"),
-		url(../fonts/carkeek-blocks.woff2?50345014) format("woff2"),
-		url(../fonts/carkeek-blocks.woff?50345014) format("woff"),
-		url(../fonts/carkeek-blocks.ttf?50345014) format("truetype"),
-		url(../fonts/carkeek-blocks.svg?50345014#carkeek-blocks) format("svg");
-	font-weight: 400;
+		url("../fonts/carkeek-blocks.eot?74982249#iefix") format("embedded-opentype"),
+		url("../fonts/carkeek-blocks.woff2?74982249") format("woff2"),
+		url("../fonts/carkeek-blocks.woff?74982249") format("woff"),
+		url("../fonts/carkeek-blocks.ttf?74982249") format("truetype");
+	font-weight: normal;
 	font-style: normal;
 }
+/* stylelint-enable */
 
 /* Chrome hack: SVG is rendered more smooth in Windozze.
-100% magic, uncomment if you need it. */
+	100% magic, uncomment if you need it. */
 
 /* Note, that will break hinting!
-In other OS-es font will be not as sharp as it could be */
+	In other OS-es font will be not as sharp as it could be */
 
-/*
-  @media screen and (-webkit-min-device-pixel-ratio:0) {
+
+/* @media screen and (-webkit-min-device-pixel-ratio: 0) {
+
 	@font-face {
-	  font-family: 'carkeek-blocks';
-	  src: url('../fonts/carkeek-blocks.svg?50345014#carkeek-blocks') format('svg');
+		font-family: "carkeek-blocks";
+		src: url("../font/carkeek-blocks.svg?63798271#carkeek-blocks")
+		 format("svg");
 	}
-  }
-  */
+} */
+
 
 [class^="icon-"]::before,
 [class*=" icon-"]::before {
-	font-family: carkeek-blocks, sans-serif;
+	font-family: carkeek-blocks;
 	font-style: normal;
-	font-weight: 400;
+	font-weight: normal;
 	speak: never;
 
 	display: inline-block;
@@ -102,6 +105,12 @@ In other OS-es font will be not as sharp as it could be */
 .icon-lock::before {
 	content: "\e80b";
 } /* '' */
+.icon-basket::before {
+	content: "\e80c";
+} /* '' */
+.icon-arrow::before {
+	content: "\e80d";
+} /* '' */
 .icon-twitter::before {
 	content: "\f099";
 } /* '' */

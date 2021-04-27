@@ -1,6 +1,6 @@
 .gform_wrapper {
 	padding-top: 2rem;
-	font: var(--form-field-font-family);
+	font-family: var(--form-field-font-family);
 }
 
 .gform_description {
@@ -39,6 +39,12 @@ h3.gform_title {
 	margin-bottom: 0;
 }
 
+h2.gsection_title {
+	font-size: var(--font-size-h3);
+	margin-bottom: 0;
+	font-family: var(--global-font-family);
+}
+
 
 .gfield > label {
 	font-weight: 600;
@@ -61,8 +67,9 @@ h3.gform_title {
 }
 
 .field_sublabel_below .ginput_complex label {
-	margin-top: 0.25rem;
 	display: block;
+	font-size: 90%;
+	margin-bottom: 0.5rem;
 }
 
 .ginput_complex {
@@ -87,6 +94,7 @@ body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container {
 	position: absolute !important;
 	left: -9000px;
 }
+
 
 @media (--tablet-up) {
 
@@ -121,6 +129,7 @@ body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container {
 		float: left;
 		padding-left: 15px;
 	}
+
 }
 
 /** Radio + Checkboxes **/
@@ -142,7 +151,6 @@ ul.gfield_radio {
 	padding-left: 0.25rem;
 	position: relative;
 	cursor: pointer;
-	height: 20px;
 	padding-top: 1px;
 }
 
@@ -180,10 +188,9 @@ ul.gfield_radio {
 	display: block;
 	border-radius: 100%;
 	text-align: center;
-	color: #41b883;
 	position: absolute;
 	left: -18px;
-	top: 5px;
+	top: 12px;
 }
 
 .gfield_checkbox > li > input:checked + label::before {
@@ -199,5 +206,140 @@ ul.gfield_radio {
 
 .gfield_checkbox > li > input:active {
 	border: 2px solid #34495e;
+}
+
+/** custom button style radios **/
+.gfield.radio_buttons {
+	position: relative;
+
+	& .gfield_radio {
+		display: flex;
+		flex-wrap: wrap;
+
+		& input[type="radio"] {
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: 0;
+
+			&:checked + label {
+				background-color: var(--color-theme-primary);
+				color: #fff;
+			}
+		}
+
+		& li {
+			padding: 0.5rem;
+			width: 50%;
+
+			& label {
+				display: block;
+				cursor: pointer;
+				width: 100%;
+				max-width: none;
+				margin: 0;
+				padding: 12px;
+				border: 2px solid var(--color-theme-primary);
+				text-transform: uppercase;
+				border-radius: 6px;
+				text-align: center;
+				color: var(--color-theme-primary);
+				transition: background 0.5s ease;
+				height: auto;
+
+				&:hover {
+					background-color: var(--color-theme-primary);
+					color: #fff;
+				}
+			}
+		}
+	}
+
+}
+
+@media (--tablet-up) {
+
+	.gfield.radio_buttons {
+		position: relative;
+
+		&.col_2 {
+
+			& .gfield_radio {
+
+				& li {
+					width: 50%;
+				}
+			}
+		}
+
+		&.col_3,
+		&.col_6 {
+
+			& .gfield_radio {
+
+				& li {
+					width: 33.33%;
+				}
+			}
+		}
+
+		&.col_4,
+		&.col_5 {
+
+			& .gfield_radio {
+
+				& li {
+					width: 25%;
+				}
+			}
+		}
+	}
+}
+
+@media (--desktop-up) {
+
+	.gfield.radio_buttons {
+		position: relative;
+
+		&.col_3 {
+
+			& .gfield_radio {
+
+				& li {
+					width: 33.33%;
+				}
+			}
+		}
+
+		&.col_4 {
+
+			& .gfield_radio {
+
+				& li {
+					width: 25%;
+				}
+			}
+		}
+
+		&.col_5 {
+
+			& .gfield_radio {
+
+				& li {
+					width: 20%;
+				}
+			}
+		}
+
+		&.col_6 {
+
+			& .gfield_radio {
+
+				& li {
+					width: 16.66667%;
+				}
+			}
+		}
+	}
 }
 

@@ -2,7 +2,7 @@
 # Footer
 --------------------------------------------------------------*/
 .footer-colophon {
-	padding: 2em;
+	padding: 0.5rem 1rem;
 	font-family: var(--highlight-font-family);
 	font-stretch: condensed;
 	font-size: 14px;
@@ -64,6 +64,7 @@ footer .widget_nav_menu {
 	.colophon-info {
 		display: flex;
 		justify-content: center;
+		margin: 0;
 	}
 
 	.colophon {
@@ -95,6 +96,8 @@ footer .widget_nav_menu {
 	.footer-section .gform_body,
 	.footer-section .gform_footer {
 		max-width: 425px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	.footer-colophon .widget_wrapper {
@@ -109,11 +112,11 @@ footer .widget_nav_menu {
 @media (--tablet-wide-up) {
 
 	.footer-colophon {
-		padding: 2em 0;
+		padding: 0.5rem 0;
 	}
 
 	.footer-lower .widget_wrapper {
-		max-width: var(--content-width);
+		max-width: var(--header-width);
 		margin-left: auto;
 		margin-right: auto;
 	}

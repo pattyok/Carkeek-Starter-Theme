@@ -72,7 +72,7 @@ class Component implements Component_Interface {
 				array(
 					'name'  => __( 'Grey', 'wp-rig' ),
 					'slug'  => 'theme-grey',
-					'color' => '#EAEAEA',
+					'color' => '#c0c0c0',
 				),
 				array(
 					'name'  => __( 'Grey-Light', 'wp-rig' ),
@@ -82,12 +82,22 @@ class Component implements Component_Interface {
 				array(
 					'name'  => __( 'Blue', 'wp-rig' ),
 					'slug'  => 'theme-blue',
-					'color' => '#4682B4',
+					'color' => '#037bc1',
 				),
 				array(
 					'name'  => __( 'Green', 'wp-rig' ),
 					'slug'  => 'theme-green',
-					'color' => '#7d9d30',
+					'color' => '#3faf49',
+				),
+				array(
+					'name'  => __( 'Blue Dark', 'wp-rig' ),
+					'slug'  => 'theme-blue-dark',
+					'color' => '#037bc1',
+				),
+				array(
+					'name'  => __( 'Green Dark', 'wp-rig' ),
+					'slug'  => 'theme-green-dark',
+					'color' => '#007a4b',
 				),
 				array(
 					'name'  => __( 'White', 'wp-rig' ),
@@ -145,12 +155,14 @@ class Component implements Component_Interface {
 	public function custom_color_palettes() {
 		$color_palettes = wp_json_encode(
 			array(
-				'#EAEAEA',
+				'#c0c0c0',
 				'#F2F2F2',
-				'#4682B4',
-				'#7d9d30',
-				'#414141',
+				'#3faf49',
+				'#007a4b',
+				'#037bc1',
+				'#252d65',
 				'#fff',
+				'#000'
 			)
 		);
 		wp_add_inline_script( 'wp-color-picker', 'jQuery.wp.wpColorPicker.prototype.options.palettes = ' . $color_palettes . ';' );

@@ -19,38 +19,83 @@ textarea {
 }
 
 
-h1 {
-	font-stretch: condensed;
-	clear: both;
-	font-size: var(--font-size-h1);
-	font-family: var(--headings-font-family);
-	font-weight: var(--font-weight-medium);
-	margin: 0 0 1.25rem;
-	line-height: var(--headings-line-height);
-}
-
+h1,
 h2,
 h3,
 h4,
-h5 {
-	line-height: var(--headings-line-height);
-	font-weight: var(--font-weight-medium);
-	margin: 0 0 1.25rem;
-	font-family: var(--headings-font-family);
+h5,
+h6 {
+	margin-top: 0;
+	margin-bottom: 1em;
+	font-family: var(--font-family-headings);
 
+	&:not(.has-text-color) a {
+		color: var(--color-link);
+		font-weight: var(--font-weight-bold);
+
+		&:visited {
+			color: var(--color-link);
+		}
+	}
+
+	&:not(.has-text-color):hover a {
+		color: var(--color-link);
+	}
+
+	&.has-text-color a {
+		font-weight: var(--font-weight-bold);
+	}
 }
 
-h2 {
+p + h2,
+p + h3,
+p + h4,
+p + h5,
+p + h6 {
+	margin-top: 1.5em;
+}
+
+
+h2 + [class^="wp-block-"] {
+	margin-top: var(--block-spacing-vert-small);
+}
+
+h1,
+.h1 {
+	font-size: var(--font-size-h1);
+	line-height: 1.3888;
+	font-family: var(--global-font-family);
+	font-weight: var(--font-weight-bold);
+}
+
+h2,
+.h2 {
 	line-height: 1.15;
 	font-size: var(--font-size-h2);
 }
 
-h3 {
+h3,
+.h3 {
 	font-size: var(--font-size-h3);
 }
 
-h4 {
+h4,
+.h4 {
 	font-size: var(--font-size-h4);
+	margin-bottom: 0.75em;
+}
+
+h5,
+.h5 {
+	font-size: var(--font-size-h5);
+	margin-bottom: 0.5em;
+}
+
+h6,
+.h6 {
+	font-size: var(--font-size-h6);
+	font-weight: 700;
+	margin-bottom: 0.5em;
 }
 /* stylelint-enable */
 
@@ -68,8 +113,6 @@ em,
 i {
 	font-style: italic;
 }
-
-
 
 blockquote cite {
 	color: var(--color-quote-citation);

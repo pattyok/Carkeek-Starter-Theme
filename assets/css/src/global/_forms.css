@@ -15,7 +15,7 @@ input[type="submit"] {
 	border: 1px solid;
 	border-color: transparent;
 	border-radius: 0;
-	background: var(--color-button-bg);
+	background: var(--color-button-background);
 	color: var(--color-button-text);
 	font-size: var(--font-size-regular);
 	font-family: var(--form-field-font-family);
@@ -31,7 +31,7 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-	background: var(--color-button-bg-hover);
+	background: var(--color-button-background-hover);
 }
 
 button:active,
